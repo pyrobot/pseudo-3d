@@ -1,0 +1,131 @@
+@import "nib"
+
+unitSize = 900px
+wallColor = #444
+ceilingColor = #686868
+floorColor = #000
+backgroundColor = #191919
+
+body, html
+  background-color #333
+  margin 0
+  padding 0
+
+h1
+  text-align center
+
+.game-window
+  absolute top 50% left 50%
+  width unitSize + 4
+  height unitSize + 4
+  margin-left -1 * (unitSize / 2) 
+  margin-top -1 * (unitSize / 2)
+  border 5px solid black
+  perspective unitSize
+  overflow hidden
+  background-color backgroundColor
+  animation 2s spin infinite
+  .wall
+    position absolute
+    width unitSize 
+    height unitSize 
+    border solid 1px white
+
+  .ceiling
+    ._0
+      transform translateY(-1 * (unitSize / 2)) translateX(-1 * unitSize) rotateX(90deg) 
+      background-color ceilingColor
+    ._1
+      transform translateY(-1 * (unitSize / 2)) rotateX(90deg) 
+      background-color ceilingColor
+    ._2
+      transform translateY(-1 * (unitSize / 2)) translateX(unitSize) rotateX(90deg) 
+      background-color ceilingColor
+    ._3
+      transform translateY(-1 * (unitSize / 2)) translateX(-1 * unitSize) translateZ(-1 * unitSize) rotateX(90deg) 
+      background-color ceilingColor
+    ._4
+      transform translateY(-1 * (unitSize / 2)) translateZ(-1 * unitSize) rotateX(90deg) 
+      background-color ceilingColor
+    ._5
+      transform translateY(-1 * (unitSize / 2)) translateX(unitSize) translateZ(-1 * unitSize) rotateX(90deg) 
+      background-color ceilingColor
+    ._6
+      transform translateY(-1 * (unitSize / 2)) translateX(-1 * unitSize) translateZ(-2 * unitSize) rotateX(90deg) 
+      background-color ceilingColor
+    ._7
+      transform translateY(-1 * (unitSize / 2)) translateZ(-2 * unitSize) rotateX(90deg) 
+      background-color ceilingColor
+    ._8
+      transform translateY(-1 * (unitSize / 2)) translateX(unitSize) translateZ(-2 * unitSize) rotateX(90deg) 
+      background-color ceilingColor
+
+  .floor
+    ._0
+      transform translateY(unitSize / 2) translateX(-1 * unitSize) rotateX(90deg) 
+      background-color floorColor
+    ._1
+      transform translateY(unitSize / 2) rotateX(90deg) 
+      background-color floorColor
+    ._2
+      transform translateY(unitSize / 2) translateX(unitSize) rotateX(90deg) 
+      background-color floorColor
+    ._3
+      transform translateY(unitSize / 2) translateX(-1 * unitSize) translateZ(-1 * unitSize) rotateX(90deg) 
+      background-color floorColor
+    ._4
+      transform translateY(unitSize / 2) translateZ(-1 * unitSize) rotateX(90deg) 
+      background-color floorColor
+    ._5
+      transform translateY(unitSize / 2) translateX(unitSize) translateZ(-1 * unitSize) rotateX(90deg) 
+      background-color floorColor
+    ._6
+      transform translateY(unitSize / 2) translateX(-1 * unitSize) translateZ(-2 * unitSize) rotateX(90deg) 
+      background-color floorColor
+    ._7
+      transform translateY(unitSize / 2) translateZ(-2 * unitSize) rotateX(90deg) 
+      background-color floorColor
+    ._8
+      transform translateY(unitSize / 2) translateX(unitSize) translateZ(-2 * unitSize) rotateX(90deg) 
+      background-color floorColor
+
+  .sides
+    ._0
+      // not visible due to perspective
+      transform translate3D(-1 * unitSize, 0, 0) rotateY(90deg)
+    ._1
+      // background-color red
+      transform translate3D(-.5 * unitSize, 0, 0) rotateY(90deg)
+    ._2
+      transform translate3D(.5 * unitSize, 0, 0) rotateY(90deg)
+      // background-color red
+    ._3
+      // not visible due to perspective
+      transform translate3D(unitSize, 0, 0) rotateY(90deg)
+      background-color wallColor
+    ._4
+      // not visible due to perspective
+      background-color wallColor
+      transform translate3D(-1 * (unitSize + (unitSize / 2)), 0, -1 * unitSize) rotateY(90deg)
+    ._5
+      background-color wallColor
+      transform translate3D(-.5 * unitSize, 0, -1 * unitSize) rotateY(90deg)
+    ._6
+      background-color wallColor
+      transform translate3D(.5 * unitSize, 0, -1 * unitSize) rotateY(90deg)
+    ._7
+      // not visible due to perspective
+      background-color wallColor
+      transform translate3D(unitSize + (unitSize / 2), 0, -1 * unitSize) rotateY(90deg)
+    ._8
+      background-color wallColor
+      transform translate3D(-1 * (unitSize + (unitSize / 2)), 0, -2 * unitSize) rotateY(90deg)
+    ._9
+      background-color wallColor
+      transform translate3D(-.5 * unitSize, 0, -2 * unitSize) rotateY(90deg)
+    ._10
+      background-color wallColor
+      transform translate3D(.5 * unitSize, 0, -2 * unitSize) rotateY(90deg)
+    ._11
+      background-color wallColor
+      transform translate3D(unitSize + (unitSize / 2), 0, -2 * unitSize) rotateY(90deg)

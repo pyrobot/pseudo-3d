@@ -1,0 +1,14 @@
+include helpers
+
+!!!
+html
+  head
+    title Maze
+    link(rel="stylesheet", href="app.css")
+  body
+    h1 No canvas, just divs and CSS 3d transforms
+    .game-window
+      .ceiling: +createGrid(9)
+      .floor: +createGrid(9)
+      .sides: +createGrid(12)
+  script(src="app.js")
