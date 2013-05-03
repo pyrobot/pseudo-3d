@@ -1,14 +1,20 @@
-include helpers
-
+mixin createGrid(size)
+  - for (var i = 0, l = size; i < l; i++) {
+      div(class="wall _#{i}")
+  - }
+  
 !!!
 html
   head
-    title Maze
+    title No canvas! Just divs and CSS
     link(rel="stylesheet", href="app.css")
   body
-    h1 No canvas, just divs and CSS 3d transforms
-    .game-window
-      .ceiling: +createGrid(9)
+    .view-window
       .floor: +createGrid(9)
-      .sides: +createGrid(12)
+      .ceiling: +createGrid(9)
+      .side: +createGrid(12)
+      .front: +createGrid(9)
   script(src="app.js")
+
+  script
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')

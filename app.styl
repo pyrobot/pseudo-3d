@@ -1,20 +1,17 @@
 @import "nib"
 
-unitSize = 900px
-wallColor = #444
-ceilingColor = #686868
-floorColor = #000
-backgroundColor = #191919
+unitSize     = 900px
+wallColor    = #444
+ceilingColor = #777
+floorColor   = #000
+viewColor    = #222
 
 body, html
   background-color #333
   margin 0
   padding 0
 
-h1
-  text-align center
-
-.game-window
+.view-window
   absolute top 50% left 50%
   width unitSize + 4
   height unitSize + 4
@@ -23,13 +20,12 @@ h1
   border 5px solid black
   perspective unitSize
   overflow hidden
-  background-color backgroundColor
-  animation 2s spin infinite
+  background-color viewColor
+
   .wall
     position absolute
-    width unitSize 
-    height unitSize 
-    border solid 1px white
+    width unitSize + 10
+    height unitSize + 10
 
   .ceiling
     ._0
@@ -89,16 +85,17 @@ h1
       transform translateY(unitSize / 2) translateX(unitSize) translateZ(-2 * unitSize) rotateX(90deg) 
       background-color floorColor
 
-  .sides
+  .side
     ._0
       // not visible due to perspective
       transform translate3D(-1 * unitSize, 0, 0) rotateY(90deg)
+      background-color wallColor
     ._1
-      // background-color red
       transform translate3D(-.5 * unitSize, 0, 0) rotateY(90deg)
+      background-color wallColor
     ._2
       transform translate3D(.5 * unitSize, 0, 0) rotateY(90deg)
-      // background-color red
+      background-color wallColor
     ._3
       // not visible due to perspective
       transform translate3D(unitSize, 0, 0) rotateY(90deg)
@@ -129,3 +126,32 @@ h1
     ._11
       background-color wallColor
       transform translate3D(unitSize + (unitSize / 2), 0, -2 * unitSize) rotateY(90deg)
+
+  .front
+    ._0
+      transform translate3D(-1 * unitSize, 0, 0) 
+      background-color wallColor
+    ._1
+      transform translate3D(0, 0, 0) 
+      background-color wallColor
+    ._2
+      transform translate3D(unitSize, 0, 0) 
+      background-color wallColor
+    ._3
+      transform translate3D(-1 * unitSize, 0, -1 * unitSize) 
+      background-color wallColor
+    ._4
+      transform translate3D(0, 0, -1 * unitSize) 
+      background-color wallColor
+    ._5
+      transform translate3D(unitSize, 0, -1 * unitSize)
+      background-color wallColor
+    ._6
+      transform translate3D(-1 * unitSize, 0, -2 * unitSize) 
+      background-color wallColor
+    ._7
+      transform translate3D(0, 0, -2 * unitSize) 
+      background-color wallColor
+    ._8
+      transform translate3D(unitSize, 0, -2 * unitSize)
+      background-color wallColor

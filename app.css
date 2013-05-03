@@ -4,10 +4,7 @@ html {
   margin: 0;
   padding: 0;
 }
-h1 {
-  text-align: center;
-}
-.game-window {
+.view-window {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -21,92 +18,86 @@ h1 {
   -ms-perspective: 900px;
   perspective: 900px;
   overflow: hidden;
-  background-color: #191919;
-  -webkit-animation: 2s spin infinite;
-  -moz-animation: 2s spin infinite;
-  -o-animation: 2s spin infinite;
-  -ms-animation: 2s spin infinite;
-  animation: 2s spin infinite;
+  background-color: #222;
 }
-.game-window .wall {
+.view-window .wall {
   position: absolute;
-  width: 900px;
-  height: 900px;
-  border: solid 1px #fff;
+  width: 910px;
+  height: 910px;
 }
-.game-window .ceiling ._0 {
+.view-window .ceiling ._0 {
   -webkit-transform: translateY(-450px) translateX(-900px) rotateX(90deg);
   -moz-transform: translateY(-450px) translateX(-900px) rotateX(90deg);
   -o-transform: translateY(-450px) translateX(-900px) rotateX(90deg);
   -ms-transform: translateY(-450px) translateX(-900px) rotateX(90deg);
   transform: translateY(-450px) translateX(-900px) rotateX(90deg);
-  background-color: #686868;
+  background-color: #777;
 }
-.game-window .ceiling ._1 {
+.view-window .ceiling ._1 {
   -webkit-transform: translateY(-450px) rotateX(90deg);
   -moz-transform: translateY(-450px) rotateX(90deg);
   -o-transform: translateY(-450px) rotateX(90deg);
   -ms-transform: translateY(-450px) rotateX(90deg);
   transform: translateY(-450px) rotateX(90deg);
-  background-color: #686868;
+  background-color: #777;
 }
-.game-window .ceiling ._2 {
+.view-window .ceiling ._2 {
   -webkit-transform: translateY(-450px) translateX(900px) rotateX(90deg);
   -moz-transform: translateY(-450px) translateX(900px) rotateX(90deg);
   -o-transform: translateY(-450px) translateX(900px) rotateX(90deg);
   -ms-transform: translateY(-450px) translateX(900px) rotateX(90deg);
   transform: translateY(-450px) translateX(900px) rotateX(90deg);
-  background-color: #686868;
+  background-color: #777;
 }
-.game-window .ceiling ._3 {
+.view-window .ceiling ._3 {
   -webkit-transform: translateY(-450px) translateX(-900px) translateZ(-900px) rotateX(90deg);
   -moz-transform: translateY(-450px) translateX(-900px) translateZ(-900px) rotateX(90deg);
   -o-transform: translateY(-450px) translateX(-900px) translateZ(-900px) rotateX(90deg);
   -ms-transform: translateY(-450px) translateX(-900px) translateZ(-900px) rotateX(90deg);
   transform: translateY(-450px) translateX(-900px) translateZ(-900px) rotateX(90deg);
-  background-color: #686868;
+  background-color: #777;
 }
-.game-window .ceiling ._4 {
+.view-window .ceiling ._4 {
   -webkit-transform: translateY(-450px) translateZ(-900px) rotateX(90deg);
   -moz-transform: translateY(-450px) translateZ(-900px) rotateX(90deg);
   -o-transform: translateY(-450px) translateZ(-900px) rotateX(90deg);
   -ms-transform: translateY(-450px) translateZ(-900px) rotateX(90deg);
   transform: translateY(-450px) translateZ(-900px) rotateX(90deg);
-  background-color: #686868;
+  background-color: #777;
 }
-.game-window .ceiling ._5 {
+.view-window .ceiling ._5 {
   -webkit-transform: translateY(-450px) translateX(900px) translateZ(-900px) rotateX(90deg);
   -moz-transform: translateY(-450px) translateX(900px) translateZ(-900px) rotateX(90deg);
   -o-transform: translateY(-450px) translateX(900px) translateZ(-900px) rotateX(90deg);
   -ms-transform: translateY(-450px) translateX(900px) translateZ(-900px) rotateX(90deg);
   transform: translateY(-450px) translateX(900px) translateZ(-900px) rotateX(90deg);
-  background-color: #686868;
+  background-color: #777;
 }
-.game-window .ceiling ._6 {
+.view-window .ceiling ._6 {
   -webkit-transform: translateY(-450px) translateX(-900px) translateZ(-1800px) rotateX(90deg);
   -moz-transform: translateY(-450px) translateX(-900px) translateZ(-1800px) rotateX(90deg);
   -o-transform: translateY(-450px) translateX(-900px) translateZ(-1800px) rotateX(90deg);
   -ms-transform: translateY(-450px) translateX(-900px) translateZ(-1800px) rotateX(90deg);
   transform: translateY(-450px) translateX(-900px) translateZ(-1800px) rotateX(90deg);
-  background-color: #686868;
+  background-color: #777;
 }
-.game-window .ceiling ._7 {
+.view-window .ceiling ._7 {
   -webkit-transform: translateY(-450px) translateZ(-1800px) rotateX(90deg);
   -moz-transform: translateY(-450px) translateZ(-1800px) rotateX(90deg);
   -o-transform: translateY(-450px) translateZ(-1800px) rotateX(90deg);
   -ms-transform: translateY(-450px) translateZ(-1800px) rotateX(90deg);
   transform: translateY(-450px) translateZ(-1800px) rotateX(90deg);
-  background-color: #686868;
+  background-color: #777;
 }
-.game-window .ceiling ._8 {
+.view-window .ceiling ._8 {
   -webkit-transform: translateY(-450px) translateX(900px) translateZ(-1800px) rotateX(90deg);
   -moz-transform: translateY(-450px) translateX(900px) translateZ(-1800px) rotateX(90deg);
   -o-transform: translateY(-450px) translateX(900px) translateZ(-1800px) rotateX(90deg);
   -ms-transform: translateY(-450px) translateX(900px) translateZ(-1800px) rotateX(90deg);
   transform: translateY(-450px) translateX(900px) translateZ(-1800px) rotateX(90deg);
-  background-color: #686868;
+  background-color: #777;
 }
-.game-window .floor ._0 {
+.view-window .floor ._0 {
   -webkit-transform: translateY(450px) translateX(-900px) rotateX(90deg);
   -moz-transform: translateY(450px) translateX(-900px) rotateX(90deg);
   -o-transform: translateY(450px) translateX(-900px) rotateX(90deg);
@@ -114,7 +105,7 @@ h1 {
   transform: translateY(450px) translateX(-900px) rotateX(90deg);
   background-color: #000;
 }
-.game-window .floor ._1 {
+.view-window .floor ._1 {
   -webkit-transform: translateY(450px) rotateX(90deg);
   -moz-transform: translateY(450px) rotateX(90deg);
   -o-transform: translateY(450px) rotateX(90deg);
@@ -122,7 +113,7 @@ h1 {
   transform: translateY(450px) rotateX(90deg);
   background-color: #000;
 }
-.game-window .floor ._2 {
+.view-window .floor ._2 {
   -webkit-transform: translateY(450px) translateX(900px) rotateX(90deg);
   -moz-transform: translateY(450px) translateX(900px) rotateX(90deg);
   -o-transform: translateY(450px) translateX(900px) rotateX(90deg);
@@ -130,7 +121,7 @@ h1 {
   transform: translateY(450px) translateX(900px) rotateX(90deg);
   background-color: #000;
 }
-.game-window .floor ._3 {
+.view-window .floor ._3 {
   -webkit-transform: translateY(450px) translateX(-900px) translateZ(-900px) rotateX(90deg);
   -moz-transform: translateY(450px) translateX(-900px) translateZ(-900px) rotateX(90deg);
   -o-transform: translateY(450px) translateX(-900px) translateZ(-900px) rotateX(90deg);
@@ -138,7 +129,7 @@ h1 {
   transform: translateY(450px) translateX(-900px) translateZ(-900px) rotateX(90deg);
   background-color: #000;
 }
-.game-window .floor ._4 {
+.view-window .floor ._4 {
   -webkit-transform: translateY(450px) translateZ(-900px) rotateX(90deg);
   -moz-transform: translateY(450px) translateZ(-900px) rotateX(90deg);
   -o-transform: translateY(450px) translateZ(-900px) rotateX(90deg);
@@ -146,7 +137,7 @@ h1 {
   transform: translateY(450px) translateZ(-900px) rotateX(90deg);
   background-color: #000;
 }
-.game-window .floor ._5 {
+.view-window .floor ._5 {
   -webkit-transform: translateY(450px) translateX(900px) translateZ(-900px) rotateX(90deg);
   -moz-transform: translateY(450px) translateX(900px) translateZ(-900px) rotateX(90deg);
   -o-transform: translateY(450px) translateX(900px) translateZ(-900px) rotateX(90deg);
@@ -154,7 +145,7 @@ h1 {
   transform: translateY(450px) translateX(900px) translateZ(-900px) rotateX(90deg);
   background-color: #000;
 }
-.game-window .floor ._6 {
+.view-window .floor ._6 {
   -webkit-transform: translateY(450px) translateX(-900px) translateZ(-1800px) rotateX(90deg);
   -moz-transform: translateY(450px) translateX(-900px) translateZ(-1800px) rotateX(90deg);
   -o-transform: translateY(450px) translateX(-900px) translateZ(-1800px) rotateX(90deg);
@@ -162,7 +153,7 @@ h1 {
   transform: translateY(450px) translateX(-900px) translateZ(-1800px) rotateX(90deg);
   background-color: #000;
 }
-.game-window .floor ._7 {
+.view-window .floor ._7 {
   -webkit-transform: translateY(450px) translateZ(-1800px) rotateX(90deg);
   -moz-transform: translateY(450px) translateZ(-1800px) rotateX(90deg);
   -o-transform: translateY(450px) translateZ(-1800px) rotateX(90deg);
@@ -170,7 +161,7 @@ h1 {
   transform: translateY(450px) translateZ(-1800px) rotateX(90deg);
   background-color: #000;
 }
-.game-window .floor ._8 {
+.view-window .floor ._8 {
   -webkit-transform: translateY(450px) translateX(900px) translateZ(-1800px) rotateX(90deg);
   -moz-transform: translateY(450px) translateX(900px) translateZ(-1800px) rotateX(90deg);
   -o-transform: translateY(450px) translateX(900px) translateZ(-1800px) rotateX(90deg);
@@ -178,28 +169,31 @@ h1 {
   transform: translateY(450px) translateX(900px) translateZ(-1800px) rotateX(90deg);
   background-color: #000;
 }
-.game-window .sides ._0 {
+.view-window .side ._0 {
   -webkit-transform: translate3D(-900px, 0, 0) rotateY(90deg);
   -moz-transform: translate3D(-900px, 0, 0) rotateY(90deg);
   -o-transform: translate3D(-900px, 0, 0) rotateY(90deg);
   -ms-transform: translate3D(-900px, 0, 0) rotateY(90deg);
   transform: translate3D(-900px, 0, 0) rotateY(90deg);
+  background-color: #444;
 }
-.game-window .sides ._1 {
+.view-window .side ._1 {
   -webkit-transform: translate3D(-450px, 0, 0) rotateY(90deg);
   -moz-transform: translate3D(-450px, 0, 0) rotateY(90deg);
   -o-transform: translate3D(-450px, 0, 0) rotateY(90deg);
   -ms-transform: translate3D(-450px, 0, 0) rotateY(90deg);
   transform: translate3D(-450px, 0, 0) rotateY(90deg);
+  background-color: #444;
 }
-.game-window .sides ._2 {
+.view-window .side ._2 {
   -webkit-transform: translate3D(450px, 0, 0) rotateY(90deg);
   -moz-transform: translate3D(450px, 0, 0) rotateY(90deg);
   -o-transform: translate3D(450px, 0, 0) rotateY(90deg);
   -ms-transform: translate3D(450px, 0, 0) rotateY(90deg);
   transform: translate3D(450px, 0, 0) rotateY(90deg);
+  background-color: #444;
 }
-.game-window .sides ._3 {
+.view-window .side ._3 {
   -webkit-transform: translate3D(900px, 0, 0) rotateY(90deg);
   -moz-transform: translate3D(900px, 0, 0) rotateY(90deg);
   -o-transform: translate3D(900px, 0, 0) rotateY(90deg);
@@ -207,7 +201,7 @@ h1 {
   transform: translate3D(900px, 0, 0) rotateY(90deg);
   background-color: #444;
 }
-.game-window .sides ._4 {
+.view-window .side ._4 {
   background-color: #444;
   -webkit-transform: translate3D(-1350px, 0, -900px) rotateY(90deg);
   -moz-transform: translate3D(-1350px, 0, -900px) rotateY(90deg);
@@ -215,7 +209,7 @@ h1 {
   -ms-transform: translate3D(-1350px, 0, -900px) rotateY(90deg);
   transform: translate3D(-1350px, 0, -900px) rotateY(90deg);
 }
-.game-window .sides ._5 {
+.view-window .side ._5 {
   background-color: #444;
   -webkit-transform: translate3D(-450px, 0, -900px) rotateY(90deg);
   -moz-transform: translate3D(-450px, 0, -900px) rotateY(90deg);
@@ -223,7 +217,7 @@ h1 {
   -ms-transform: translate3D(-450px, 0, -900px) rotateY(90deg);
   transform: translate3D(-450px, 0, -900px) rotateY(90deg);
 }
-.game-window .sides ._6 {
+.view-window .side ._6 {
   background-color: #444;
   -webkit-transform: translate3D(450px, 0, -900px) rotateY(90deg);
   -moz-transform: translate3D(450px, 0, -900px) rotateY(90deg);
@@ -231,7 +225,7 @@ h1 {
   -ms-transform: translate3D(450px, 0, -900px) rotateY(90deg);
   transform: translate3D(450px, 0, -900px) rotateY(90deg);
 }
-.game-window .sides ._7 {
+.view-window .side ._7 {
   background-color: #444;
   -webkit-transform: translate3D(1350px, 0, -900px) rotateY(90deg);
   -moz-transform: translate3D(1350px, 0, -900px) rotateY(90deg);
@@ -239,7 +233,7 @@ h1 {
   -ms-transform: translate3D(1350px, 0, -900px) rotateY(90deg);
   transform: translate3D(1350px, 0, -900px) rotateY(90deg);
 }
-.game-window .sides ._8 {
+.view-window .side ._8 {
   background-color: #444;
   -webkit-transform: translate3D(-1350px, 0, -1800px) rotateY(90deg);
   -moz-transform: translate3D(-1350px, 0, -1800px) rotateY(90deg);
@@ -247,7 +241,7 @@ h1 {
   -ms-transform: translate3D(-1350px, 0, -1800px) rotateY(90deg);
   transform: translate3D(-1350px, 0, -1800px) rotateY(90deg);
 }
-.game-window .sides ._9 {
+.view-window .side ._9 {
   background-color: #444;
   -webkit-transform: translate3D(-450px, 0, -1800px) rotateY(90deg);
   -moz-transform: translate3D(-450px, 0, -1800px) rotateY(90deg);
@@ -255,7 +249,7 @@ h1 {
   -ms-transform: translate3D(-450px, 0, -1800px) rotateY(90deg);
   transform: translate3D(-450px, 0, -1800px) rotateY(90deg);
 }
-.game-window .sides ._10 {
+.view-window .side ._10 {
   background-color: #444;
   -webkit-transform: translate3D(450px, 0, -1800px) rotateY(90deg);
   -moz-transform: translate3D(450px, 0, -1800px) rotateY(90deg);
@@ -263,11 +257,83 @@ h1 {
   -ms-transform: translate3D(450px, 0, -1800px) rotateY(90deg);
   transform: translate3D(450px, 0, -1800px) rotateY(90deg);
 }
-.game-window .sides ._11 {
+.view-window .side ._11 {
   background-color: #444;
   -webkit-transform: translate3D(1350px, 0, -1800px) rotateY(90deg);
   -moz-transform: translate3D(1350px, 0, -1800px) rotateY(90deg);
   -o-transform: translate3D(1350px, 0, -1800px) rotateY(90deg);
   -ms-transform: translate3D(1350px, 0, -1800px) rotateY(90deg);
   transform: translate3D(1350px, 0, -1800px) rotateY(90deg);
+}
+.view-window .front ._0 {
+  -webkit-transform: translate3D(-900px, 0, 0);
+  -moz-transform: translate3D(-900px, 0, 0);
+  -o-transform: translate3D(-900px, 0, 0);
+  -ms-transform: translate3D(-900px, 0, 0);
+  transform: translate3D(-900px, 0, 0);
+  background-color: #444;
+}
+.view-window .front ._1 {
+  -webkit-transform: translate3D(0, 0, 0);
+  -moz-transform: translate3D(0, 0, 0);
+  -o-transform: translate3D(0, 0, 0);
+  -ms-transform: translate3D(0, 0, 0);
+  transform: translate3D(0, 0, 0);
+  background-color: #444;
+}
+.view-window .front ._2 {
+  -webkit-transform: translate3D(900px, 0, 0);
+  -moz-transform: translate3D(900px, 0, 0);
+  -o-transform: translate3D(900px, 0, 0);
+  -ms-transform: translate3D(900px, 0, 0);
+  transform: translate3D(900px, 0, 0);
+  background-color: #444;
+}
+.view-window .front ._3 {
+  -webkit-transform: translate3D(-900px, 0, -900px);
+  -moz-transform: translate3D(-900px, 0, -900px);
+  -o-transform: translate3D(-900px, 0, -900px);
+  -ms-transform: translate3D(-900px, 0, -900px);
+  transform: translate3D(-900px, 0, -900px);
+  background-color: #444;
+}
+.view-window .front ._4 {
+  -webkit-transform: translate3D(0, 0, -900px);
+  -moz-transform: translate3D(0, 0, -900px);
+  -o-transform: translate3D(0, 0, -900px);
+  -ms-transform: translate3D(0, 0, -900px);
+  transform: translate3D(0, 0, -900px);
+  background-color: #444;
+}
+.view-window .front ._5 {
+  -webkit-transform: translate3D(900px, 0, -900px);
+  -moz-transform: translate3D(900px, 0, -900px);
+  -o-transform: translate3D(900px, 0, -900px);
+  -ms-transform: translate3D(900px, 0, -900px);
+  transform: translate3D(900px, 0, -900px);
+  background-color: #444;
+}
+.view-window .front ._6 {
+  -webkit-transform: translate3D(-900px, 0, -1800px);
+  -moz-transform: translate3D(-900px, 0, -1800px);
+  -o-transform: translate3D(-900px, 0, -1800px);
+  -ms-transform: translate3D(-900px, 0, -1800px);
+  transform: translate3D(-900px, 0, -1800px);
+  background-color: #444;
+}
+.view-window .front ._7 {
+  -webkit-transform: translate3D(0, 0, -1800px);
+  -moz-transform: translate3D(0, 0, -1800px);
+  -o-transform: translate3D(0, 0, -1800px);
+  -ms-transform: translate3D(0, 0, -1800px);
+  transform: translate3D(0, 0, -1800px);
+  background-color: #444;
+}
+.view-window .front ._8 {
+  -webkit-transform: translate3D(900px, 0, -1800px);
+  -moz-transform: translate3D(900px, 0, -1800px);
+  -o-transform: translate3D(900px, 0, -1800px);
+  -ms-transform: translate3D(900px, 0, -1800px);
+  transform: translate3D(900px, 0, -1800px);
+  background-color: #444;
 }
