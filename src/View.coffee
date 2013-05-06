@@ -1,77 +1,7 @@
-class Player
-  constructor: (options) -> @setPosition(options)
-
-  movements =
-    north: forward: { y: -1 }, right: { x:  1 }, back: { y:  1 }, left: { x: -1 }
-    east:  forward: { x:  1 }, right: { y:  1 }, back: { x: -1 }, left: { y: -1 }
-    south: forward: { y:  1 }, right: { x: -1 }, back: { y: -1 }, left: { x:  1 }
-    west:  forward: { x: -1 }, right: { y: -1 }, back: { x:  1 }, left: { y:  1 }
-
-  orientation = 
-      north: forward: 'north', right: 'east',  left: 'west',  back: 'south'
-      east:  forward: 'east' , right: 'south', left: 'north', back: 'west'
-      south: forward: 'south', right: 'west',  left: 'east',  back: 'north'
-      west:  forward: 'west',  right: 'north', left: 'south', back: 'east'
-
-  setPosition: (options) ->
-    options = options or {}
-    {x, y, heading} = options
-    @x = x or @x or 0
-    @y = y or @y or 0
-    @heading = heading or @heading or 'south'
-    update.apply @
-
-  offsetPosition: (options) ->
-    options = options or {}
-    {x, y, heading} = options
-    if x? then @x += x 
-    if y? then @y += y
-    if heading? then @heading = heading
-    update.apply @
-
-  forward: -> @offsetPosition @movement.forward
-  backward: -> @offsetPosition @movement.back
-  left: -> @offsetPosition heading: @orientation.left
-  right: -> @offsetPosition heading: @orientation.right
-
-  update = ->
-    @movement = movements[@heading]
-    @orientation = orientation[@heading]
-    @currentRoom = "#{@x}:#{@y}"
-    View.update @
-
-class Rooms
-  constructor: (@width, @height) ->
-    for w in [0..@width]
-      for h in [0..@height]
-        boundaries = 
-          north: h is 0
-          east:  w is @width
-          south: h is @height
-          west:  w is 0
-        options = x: w, y: h, boundaries: boundaries
-        room = new Room(options)
-        @[room.position()] = room
-    View.setRooms @
-
-  getRoomAt: (x, y) -> @["#{x}:#{y}"]
-
-  getRelativeRoom: (start, steps...) -> 
-    positionArray = start.split ':'
-    position = x: positionArray[0], y: positionArray[1]
-    for step in steps
-      if step.x? then position.x += step.x
-      if step.y? then position.y += step.y
-    @["#{x}:#{y}"]
-
-  class Room
-    constructor: (options) -> {@x, @y, @boundaries} = options
-    position: -> "#{@x}:#{@y}"
-
 class View
   @setRooms = (rooms) -> ViewMatrix.setRooms rooms  
 
-  isVisible = (dir, room) -> room?.boundaries[dir] or !room
+  isVisible = (dir, room) -> room?.boundaries[dir]
 
   showIfVisible = (dir, room, piece) -> View.Utils.show piece if isVisible dir, room
 
@@ -85,6 +15,8 @@ class View
         left: matrix[2][0]
         right: matrix[2][4]
     heading = player.orientation
+
+    player.boundaries = paths.front[0].boundaries
 
     @Utils.hideGroup @Pieces.frontPieces   
 

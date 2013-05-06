@@ -1,26 +1,22 @@
 @import "nib"
 
-unitSize     = 900px
-wallColor    = #444
-ceilingColor = #777
-floorColor   = #000
-viewColor    = #222
-
-body, html
-  background-color #333
-  margin 0
-  padding 0
+unitSize     = 600px
+wallColor    = #333
+ceilingColor = #444
+floorColor   = #222
+viewColor    = #111
 
 .view-window
-  absolute top 50% left 50%
   width unitSize + 4
   height unitSize + 4
-  margin-left -1 * (unitSize / 2) 
-  margin-top -1 * (unitSize / 2)
   border 5px solid black
   perspective unitSize
   overflow hidden
-  background-color viewColor
+  background viewColor
+
+  img
+    width 100%
+    height 100%
 
   .wall
     position absolute
@@ -30,128 +26,146 @@ body, html
   .ceiling
     ._0
       transform translateY(-1 * (unitSize / 2)) translateX(-1 * unitSize) rotateX(90deg) 
-      background-color ceilingColor
+      background ceilingColor
     ._1
       transform translateY(-1 * (unitSize / 2)) rotateX(90deg) 
-      background-color ceilingColor
+      background ceilingColor
     ._2
       transform translateY(-1 * (unitSize / 2)) translateX(unitSize) rotateX(90deg) 
-      background-color ceilingColor
+      background ceilingColor
     ._3
       transform translateY(-1 * (unitSize / 2)) translateX(-1 * unitSize) translateZ(-1 * unitSize) rotateX(90deg) 
-      background-color ceilingColor
+      background ceilingColor
     ._4
       transform translateY(-1 * (unitSize / 2)) translateZ(-1 * unitSize) rotateX(90deg) 
-      background-color ceilingColor
+      background ceilingColor
     ._5
       transform translateY(-1 * (unitSize / 2)) translateX(unitSize) translateZ(-1 * unitSize) rotateX(90deg) 
-      background-color ceilingColor
+      background ceilingColor
     ._6
       transform translateY(-1 * (unitSize / 2)) translateX(-1 * unitSize) translateZ(-2 * unitSize) rotateX(90deg) 
-      background-color ceilingColor
+      background ceilingColor
     ._7
       transform translateY(-1 * (unitSize / 2)) translateZ(-2 * unitSize) rotateX(90deg) 
-      background-color ceilingColor
+      background ceilingColor
     ._8
       transform translateY(-1 * (unitSize / 2)) translateX(unitSize) translateZ(-2 * unitSize) rotateX(90deg) 
-      background-color ceilingColor
+      background ceilingColor
+    ._9
+      transform translateY(-1 * (unitSize / 2)) translateX(-2 * unitSize) translateZ(-2 * unitSize) rotateX(90deg) 
+      background ceilingColor
+    ._10
+      transform translateY(-1 * (unitSize / 2)) translateX(2 * unitSize) translateZ(-2 * unitSize) rotateX(90deg) 
+      background ceilingColor
 
   .floor
     ._0
       transform translateY(unitSize / 2) translateX(-1 * unitSize) rotateX(90deg) 
-      background-color floorColor
+      background floorColor
     ._1
       transform translateY(unitSize / 2) rotateX(90deg) 
-      background-color floorColor
+      background floorColor
     ._2
       transform translateY(unitSize / 2) translateX(unitSize) rotateX(90deg) 
-      background-color floorColor
+      background floorColor
     ._3
       transform translateY(unitSize / 2) translateX(-1 * unitSize) translateZ(-1 * unitSize) rotateX(90deg) 
-      background-color floorColor
+      background floorColor
     ._4
       transform translateY(unitSize / 2) translateZ(-1 * unitSize) rotateX(90deg) 
-      background-color floorColor
+      background floorColor
     ._5
       transform translateY(unitSize / 2) translateX(unitSize) translateZ(-1 * unitSize) rotateX(90deg) 
-      background-color floorColor
+      background floorColor
     ._6
       transform translateY(unitSize / 2) translateX(-1 * unitSize) translateZ(-2 * unitSize) rotateX(90deg) 
-      background-color floorColor
+      background floorColor
     ._7
       transform translateY(unitSize / 2) translateZ(-2 * unitSize) rotateX(90deg) 
-      background-color floorColor
+      background floorColor
     ._8
       transform translateY(unitSize / 2) translateX(unitSize) translateZ(-2 * unitSize) rotateX(90deg) 
-      background-color floorColor
+      background floorColor
+    ._9
+      transform translateY(unitSize / 2) translateX(-2 * unitSize) translateZ(-2 * unitSize) rotateX(90deg) 
+      background floorColor
+    ._10
+      transform translateY(unitSize / 2) translateX(2 * unitSize) translateZ(-2 * unitSize) rotateX(90deg) 
+      background floorColor
 
   .side
     ._0
       // not visible due to perspective
       transform translate3D(-1 * unitSize, 0, 0) rotateY(90deg)
-      background-color wallColor
+      background wallColor
     ._1
       transform translate3D(-.5 * unitSize, 0, 0) rotateY(90deg)
-      background-color wallColor
+      background wallColor
     ._2
       transform translate3D(.5 * unitSize, 0, 0) rotateY(90deg)
-      background-color wallColor
+      background wallColor
     ._3
       // not visible due to perspective
       transform translate3D(unitSize, 0, 0) rotateY(90deg)
-      background-color wallColor
+      background wallColor
     ._4
       // not visible due to perspective
-      background-color wallColor
+      background wallColor
       transform translate3D(-1 * (unitSize + (unitSize / 2)), 0, -1 * unitSize) rotateY(90deg)
     ._5
-      background-color wallColor
+      background wallColor
       transform translate3D(-.5 * unitSize, 0, -1 * unitSize) rotateY(90deg)
     ._6
-      background-color wallColor
+      background wallColor
       transform translate3D(.5 * unitSize, 0, -1 * unitSize) rotateY(90deg)
     ._7
       // not visible due to perspective
-      background-color wallColor
+      background wallColor
       transform translate3D(unitSize + (unitSize / 2), 0, -1 * unitSize) rotateY(90deg)
     ._8
-      background-color wallColor
+      background wallColor
       transform translate3D(-1 * (unitSize + (unitSize / 2)), 0, -2 * unitSize) rotateY(90deg)
     ._9
-      background-color wallColor
+      background wallColor
       transform translate3D(-.5 * unitSize, 0, -2 * unitSize) rotateY(90deg)
     ._10
-      background-color wallColor
+      background wallColor
       transform translate3D(.5 * unitSize, 0, -2 * unitSize) rotateY(90deg)
     ._11
-      background-color wallColor
+      background wallColor
       transform translate3D(unitSize + (unitSize / 2), 0, -2 * unitSize) rotateY(90deg)
 
   .front
     ._0
       transform translate3D(-1 * unitSize, 0, 0) 
-      background-color wallColor
+      background wallColor
     ._1
       transform translate3D(0, 0, 0) 
-      background-color wallColor
+      background wallColor
     ._2
       transform translate3D(unitSize, 0, 0) 
-      background-color wallColor
+      background wallColor
     ._3
       transform translate3D(-1 * unitSize, 0, -1 * unitSize) 
-      background-color wallColor
+      background wallColor
     ._4
       transform translate3D(0, 0, -1 * unitSize) 
-      background-color wallColor
+      background wallColor
     ._5
       transform translate3D(unitSize, 0, -1 * unitSize)
-      background-color wallColor
+      background wallColor
     ._6
       transform translate3D(-1 * unitSize, 0, -2 * unitSize) 
-      background-color wallColor
+      background wallColor
     ._7
       transform translate3D(0, 0, -2 * unitSize) 
-      background-color wallColor
+      background wallColor
     ._8
       transform translate3D(unitSize, 0, -2 * unitSize)
-      background-color wallColor
+      background wallColor
+    ._9
+      transform translate3D(-2 * unitSize, 0, -2 * unitSize)
+      background wallColor
+    ._10
+      transform translate3D(2 * unitSize, 0, -2 * unitSize)
+      background wallColor
